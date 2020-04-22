@@ -10,7 +10,7 @@ def sendMessage(slack_client, msg):
   # make the POST request through the python slack client
   updateMsg = slack_client.api_call(
     "chat.postMessage",
-    channel='#test',
+    channel='#icebreaker-test',
     text=msg
   )
 
@@ -21,7 +21,7 @@ def sendMessage(slack_client, msg):
     logging.debug(updateMsg)
 
 if __name__ == "__main__":
-  SLACK_BOT_TOKEN = os.environ['SLACK_BOT_TOKEN']
+  SLACK_BOT_TOKEN = "xoxb-145809127170-1078897882693-ZeralO5teIzc43CSVKgU9IDs"
   slack_client = SlackClient(SLACK_BOT_TOKEN)
   logging.debug("authorized slack client")
 
